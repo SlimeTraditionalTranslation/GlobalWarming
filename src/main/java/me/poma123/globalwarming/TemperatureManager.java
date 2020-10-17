@@ -79,7 +79,7 @@ public class TemperatureManager {
         Temperature temp = getTemperatureAtLocation(loc);
 
         if (temp == null) {
-            return "&7Measuring...";
+            return "&7測量...";
         }
 
         double celsiusValue = temp.getCelsiusValue();
@@ -133,7 +133,7 @@ public class TemperatureManager {
 
         prefix = prefix + (difference > 0 ? "+" : "");
 
-        return "&7Climate change: " + prefix + DoubleHandler.fixDouble(difference) + " &7" + tempType.getSuffix();
+        return "&7氣候變化: " + prefix + DoubleHandler.fixDouble(difference) + " &7" + tempType.getSuffix();
     }
 
     public Temperature addTemperatureChangeFactors(@Nonnull World world, @Nonnull Biome biome, @Nonnull Temperature temperature) {

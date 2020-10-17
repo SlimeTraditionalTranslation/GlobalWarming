@@ -20,8 +20,6 @@ import io.github.thebusybiscuit.slimefun4.core.handlers.ItemConsumptionHandler;
 import io.github.thebusybiscuit.slimefun4.core.researching.Research;
 import io.github.thebusybiscuit.slimefun4.implementation.items.SimpleSlimefunItem;
 import io.github.thebusybiscuit.slimefun4.implementation.SlimefunItems;
-import me.mrCookieSlime.CSCoreLibPlugin.cscorelib2.updater.GitHubBuildsUpdater;
-import me.mrCookieSlime.CSCoreLibPlugin.cscorelib2.updater.Updater;
 import me.mrCookieSlime.Slimefun.Lists.RecipeType;
 import me.mrCookieSlime.Slimefun.api.BlockStorage;
 import me.mrCookieSlime.Slimefun.cscorelib2.config.Config;
@@ -52,11 +50,6 @@ public class GlobalWarmingPlugin extends JavaPlugin implements SlimefunAddon {
     @Override
     public void onEnable() {
         instance = this;
-
-        if (cfg.getBoolean("options.auto-update") && getDescription().getVersion().startsWith("DEV - ")) {
-            Updater updater = new GitHubBuildsUpdater(this, getFile(), "poma123/GlobalWarming/master");
-            updater.start();
-        }
 
         new Metrics(this, 9132);
 
@@ -91,7 +84,7 @@ public class GlobalWarmingPlugin extends JavaPlugin implements SlimefunAddon {
     }
 
     private void registerItems() {
-        Category category = new Category(new NamespacedKey(this, "global_warming"), new CustomItem(Items.THERMOMETER, "&2Global Warming"));
+        Category category = new Category(new NamespacedKey(this, "global_warming"), new CustomItem(Items.THERMOMETER, "&2全球暖化"));
 
         new TemperatureMeter(category, Items.THERMOMETER, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
                 SlimefunItems.NICKEL_INGOT, new ItemStack(Material.GLASS), SlimefunItems.NICKEL_INGOT,
@@ -172,12 +165,12 @@ public class GlobalWarmingPlugin extends JavaPlugin implements SlimefunAddon {
     }
 
     private void registerResearches() {
-        registerResearch("thermometer", 69696969, "Thermometer", 10, Items.THERMOMETER);
-        registerResearch("air_quality_meter", 69696970, "Air Quality Meter", 30, Items.AIR_QUALITY_METER);
-        registerResearch("air_compressor", 69696971, "Air Compressor", 40, Items.AIR_COMPRESSOR);
-        registerResearch("canisters", 69696972, "Pollution storing", 6, Items.EMPTY_CANISTER, Items.CO2_CANISTER);
-        registerResearch("filter", 69696973, "Filter", 8, Items.FILTER);
-        registerResearch("mercury", 69696973, "Mercury", 12, Items.CINNABARITE, Items.MERCURY);
+        registerResearch("thermometer", 69696969, "溫度計", 10, Items.THERMOMETER);
+        registerResearch("air_quality_meter", 69696970, "空氣質量儀", 30, Items.AIR_QUALITY_METER);
+        registerResearch("air_compressor", 69696971, "空氣壓縮機", 40, Items.AIR_COMPRESSOR);
+        registerResearch("canisters", 69696972, "污染儲存", 6, Items.EMPTY_CANISTER, Items.CO2_CANISTER);
+        registerResearch("filter", 69696973, "濾網", 8, Items.FILTER);
+        registerResearch("mercury", 69696973, "汞", 12, Items.CINNABARITE, Items.MERCURY);
     }
 
     private void scheduleTasks() {

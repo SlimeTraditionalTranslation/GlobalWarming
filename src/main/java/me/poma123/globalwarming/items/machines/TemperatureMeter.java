@@ -40,7 +40,7 @@ public abstract class TemperatureMeter extends SlimefunItem {
             public void onPlayerPlace(BlockPlaceEvent e) {
                 Block b = e.getBlockPlaced();
                 BlockStorage.addBlockInfo(b,"type", TemperatureType.CELSIUS.name());
-                SimpleHologram.update(b, "&7Measuring...");
+                SimpleHologram.update(b, "&7測量...");
             }
         };
     }
@@ -62,7 +62,7 @@ public abstract class TemperatureMeter extends SlimefunItem {
             }
 
             BlockStorage.addBlockInfo(b, "type", saved.name());
-            p.sendMessage("§7Temperature type: §e" + saved.getName());
+            p.sendMessage("§7溫度類型: §e" + saved.getName());
 
             e.cancel();
         };

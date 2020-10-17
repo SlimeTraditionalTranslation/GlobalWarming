@@ -1,67 +1,69 @@
-# GlobalWarming
+# 全球暖化
+黏液科技的附加 繁體翻譯版<br>
 
-This Slimefun addon aims to add climate change mechanics to the game.
-A worth-trying, 99% configurable plugin for Minecraft Servers.
+此Slimefun附加旨在為遊戲添加氣候變化機制.
+一個值得嘗試, 99%可配置的插件給Minecraft伺服器.
 
-## Navigation
-* [Download](#download)
-* [Configuration](#configuration)
-* [Mechanics](#mechanics)
+[官方原碼連結](https://github.com/poma123/GlobalWarming)
+## 導航
+* [下載](#下載)
+* [配置](#配置)
+* [機制](#機制)
   * [Environmental mechanics](#environmental-mechanics)
-  * [Pollution mechanics](#pollution-mechanics)
-  * [News system](#news-system)
-* [Items and machines](#items-and-machines)
+  * [汙染機器](#汙染機器)
+  * [新聞快報系統](#新聞快報系統)
+* [物品與機器](#物品與機器)
 * [API](#api)
 
-## Download
-You can download GlobalWarming right here: [Development Builds](https://thebusybiscuit.github.io/builds/poma123/GlobalWarming/master/)
-
+## 下載
+繁體翻譯版: [構建頁面](https://xmikux.github.io/builds/xMikux/GlobalWarming/master)<br>
+官方開發版: [開發版構建頁面](https://thebusybiscuit.github.io/builds/poma123/GlobalWarming/master/)
 <p align="center">
-  <a href="https://thebusybiscuit.github.io/builds/poma123/GlobalWarming/master/">
-    <img src="https://thebusybiscuit.github.io/builds/poma123/GlobalWarming/master/badge.svg" alt="Build Server"/>
+  <a href="https://xmikux.github.io/builds/xMikux/GlobalWarming/master/">
+    <img src="https://xmikux.github.io/builds/xMikux/GlobalWarming/master/badge.svg" alt="構建伺服器"/>
   </a>
 </p>
 
-## Configuration
-Once you have successfully installed the plugin, take a look at the [config.yml](https://github.com/poma123/GlobalWarming/tree/master/src/main/resources/config.yml).
-- `disabled-worlds` allows you to exclude worlds from the mechanics of climate change
-- Under the `mechanics` section, you can customize the available climate change mechanics
-- The `pollution` section holds pollution production and absorption of machines, items and entities
-- Under the `temperature-options` section, you can configure how the temperature should be calculated based on pollution and weather.
+## 配置
+成功安裝此附加後,請查看[config.yml](https://github.com/xMikux/GlobalWarming/tree/master/src/main/resources/config.yml).
+- 在`disabled-worlds`可以讓你將世界排除在氣候變化機制外
+- 在`mechanics`部分下,你可以自定義可用的氣候變化機制
+- 在`pollution`部分下包含汙染產生與污染吸收,與物品和實體
+- 在`temperature-options`部分下,你可以配置如何根據汙染和天氣來計算溫度.
 
-After editing a file, restart your server!
-## Mechanics
-### Environmental mechanics:
+在你完成編輯檔案之後, 重啟你的伺服器!
+## 機制
+### 環境機制:
 
-- Forest fires (happens in loaded chunks, fire blocks will appear on random highest blocks in high temperature conditions)
-- Ice melting (happens in loaded chunks, ice will melt randomly in high temperature conditions)
-- Player slowness (happens to players if the temp. is high or low enough)
-- Player burning (happens to players if the temp. is extremely high)
+- 森林大火 (在已加載的區塊內發生,大火會隨機發生在最高溫度的方塊上)
+- 冰溶化 (在已加載的區塊內發生,冰會在高溫下隨機融化)
+- 玩家緩速 (如果溫度足夠高或低,就會發生此情況)
+- 玩家燃燒 (如果溫度過高,就會發生)
 
-### Pollution mechanics:
-The pollution can change in a per-world basis. There are two types of pollution mechanics:
+### 汙染機器
+汙染可以在每個世界範圍內變化,有兩種汙染機制:
 
-##### 1. Pollution production
-- When animals breed
-- When a polluted Slimefun machine completes their process.
-- When a polluted Slimefun item was used in a Slimefun machine.
+##### 1. 汙染產生
+- 動物繁殖時
+- 在受汙染的Slimefun機器完成它們的處理.
+- 在受汙染的Slimefun物品被使用在Slimefun的機器.
 
-##### 2. Pollution absorbtion
-- When a tree grows
-- When an absorbent Slimefun machine completes its process. (default: Air Compressor)
+##### 2. 汙染吸收
+- 當樹長大
+- 當Slimefun機器吸收完之後. (默認: 空氣壓縮機)
 
-### News system:
-- Every time the pollution changes in a world, a new "Breaking News" message will appear to all the players in that world, with a nice randomly chosen news report from the real world.
+### 新聞快報系統:
+- 每當世界上污染產生變化時,所在該世界的玩家會收到一條"新聞快報"的消息,並從現實世界中隨機選擇一個不錯的新聞快報.
 
-## Items and machines
-- Thermometer (Indicates the current temperature)
-- Air Quality Meter (Indicates the current temperature rise)
-- Air Compressor (Compresses CO2 into an Empty Canister, and absorbs pollution)
-- Empty Canister
-- CO2 Canister (Contains compressed CO2)
-- Cinnabarite (GEOResource, needed for the Mercury)
-- Mercury (Resource, needed for the Air Compressor craft)
-- Filter (needed for the Air Compressor craft)
+## 物品與機器
+- 溫度計 (顯示當前溫度)
+- 空氣質量儀 (顯示當前升高溫度)
+- 空氣壓縮機 (將二氧化碳壓縮到空罐中並且吸收汙染)
+- 空罐
+- 二氧化碳罐 (包括壓縮二氧化碳)
+- 硃砂石 (GEO資源, 需要用於汞)
+- 汞 (資源,需要用於製作空氣壓縮機)
+- 濾網 (需要用於空氣壓縮機)
 
 ![image](https://user-images.githubusercontent.com/25465545/96293130-90bcfa80-0fea-11eb-9f16-d57105148973.png)
 ## API

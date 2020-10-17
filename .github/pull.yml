@@ -1,0 +1,7 @@
+version: "1"
+rules:
+  - base: master
+    upstream: poma123:master
+    mergeMethod: merge
+    conflictReviewers:
+      - xMikux

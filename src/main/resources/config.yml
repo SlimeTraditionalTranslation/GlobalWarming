@@ -1,6 +1,3 @@
-options:
-  auto-update: true
-
 disabled-worlds:
 - disabled_world
 
