@@ -133,7 +133,7 @@ public class TemperatureManager {
 
         prefix = prefix + (difference > 0 ? "+" : "");
 
-        return "&7氣候變化: " + prefix + DoubleHandler.fixDouble(difference) + " &7" + tempType.getSuffix();
+        return prefix + DoubleHandler.fixDouble(difference) + " &7" + tempType.getSuffix();
     }
 
     public Temperature addTemperatureChangeFactors(@Nonnull World world, @Nonnull Biome biome, @Nonnull Temperature temperature) {
