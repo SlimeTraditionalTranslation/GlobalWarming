@@ -1,5 +1,7 @@
-disabled-worlds:
+worlds:
 - disabled_world
+
+world-filter-type: blacklist
 
 mechanics:
   FOREST_FIRES:

@@ -26,7 +26,8 @@
 
 ## 配置
 成功安裝此附加後,請查看[config.yml](https://github.com/xMikux/GlobalWarming/tree/master/src/main/resources/config.yml).
-- 在`disabled-worlds`可以讓你將世界排除在氣候變化機制外
+- `worlds` 可讓你將世界列入白名單或排除在氣候變化機制外
+- `world-filter-type` 定義世界過濾器要如何運行 (可用類型: ``blacklist``, ``whitelist``)
 - 在`mechanics`部分下,你可以自定義可用的氣候變化機制
 - 在`pollution`部分下包含汙染產生與污染吸收,與物品和實體
 - 在`temperature-options`部分下,你可以配置如何根據汙染和天氣來計算溫度.
