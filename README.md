@@ -4,7 +4,8 @@
 此Slimefun附加旨在為遊戲添加氣候變化機制.
 一個值得嘗試, 99%可配置的插件給Minecraft伺服器.
 
-[官方原碼連結](https://github.com/poma123/GlobalWarming)
+此為**非官方**版本, 請勿在該作者的問題追蹤內回報!
+[原作者連結](https://github.com/poma123/GlobalWarming)
 ## 導航
 * [下載](#下載)
 * [配置](#配置)

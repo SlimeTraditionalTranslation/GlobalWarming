@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.util.logging.Level;
 
-import org.bstats.bukkit.Metrics;
+//import org.bstats.bukkit.Metrics;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.Material;
@@ -51,7 +51,7 @@ public class GlobalWarmingPlugin extends JavaPlugin implements SlimefunAddon {
     public void onEnable() {
         instance = this;
 
-        new Metrics(this, 9132);
+        //new Metrics(this, 9132);
 
         // Create configuration files
         final File biomesFile = new File(getDataFolder(), "biomes.yml");
@@ -231,7 +231,7 @@ public class GlobalWarmingPlugin extends JavaPlugin implements SlimefunAddon {
 
     @Override
     public String getBugTrackerURL() {
-        return "https://github.com/poma123/GlobalWarming/issues";
+        return "https://github.com/xMikux/GlobalWarming/issues";
     }
 
     @Override
