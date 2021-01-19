@@ -24,8 +24,8 @@ import me.mrCookieSlime.Slimefun.Lists.RecipeType;
 import me.mrCookieSlime.Slimefun.api.BlockStorage;
 import me.mrCookieSlime.Slimefun.cscorelib2.config.Config;
 import me.mrCookieSlime.Slimefun.cscorelib2.item.CustomItem;
-import me.mrCookieSlime.Slimefun.cscorelib2.updater.GitHubBuildsUpdater;
-import me.mrCookieSlime.Slimefun.cscorelib2.updater.Updater;
+//import me.mrCookieSlime.Slimefun.cscorelib2.updater.GitHubBuildsUpdater;
+//import me.mrCookieSlime.Slimefun.cscorelib2.updater.Updater;
 import me.mrCookieSlime.Slimefun.Objects.Category;
 import me.mrCookieSlime.Slimefun.Objects.SlimefunItem.SlimefunItem;
 import me.poma123.globalwarming.api.TemperatureType;
@@ -53,6 +53,11 @@ public class GlobalWarmingPlugin extends JavaPlugin implements SlimefunAddon {
     @Override
     public void onEnable() {
         instance = this;
+
+        /*if (cfg.getBoolean("options.auto-update") && getDescription().getVersion().startsWith("DEV - ")) {
+            Updater updater = new GitHubBuildsUpdater(this, getFile(), "poma123/GlobalWarming/master");
+            updater.start();
+        }*/
 
         //new Metrics(this, 9132);
 
