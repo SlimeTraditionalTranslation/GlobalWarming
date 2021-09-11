@@ -4,8 +4,9 @@
 此Slimefun附加旨在為遊戲添加氣候變化機制.
 一個值得嘗試, 99%可配置的插件給Minecraft伺服器.
 
-此為**非官方**版本, 請勿在該作者的問題追蹤內回報!
-[原作者連結](https://github.com/poma123/GlobalWarming)
+> 此為**非官方**版本, 請勿在該作者問題追蹤內回報! <br>
+> [原作連結](https://github.com/poma123/GlobalWarming) | [非官方Discord](https://discord.gg/GF4CwjFXT9)
+
 ## 導航
 * [下載](#下載)
 * [配置](#配置)
@@ -17,13 +18,10 @@
 * [API](#api)
 
 ## 下載
-繁體翻譯版: [構建頁面](https://xmikux.github.io/builds/xMikux/GlobalWarming/master)<br>
-官方開發版: [開發版構建頁面](https://thebusybiscuit.github.io/builds/poma123/GlobalWarming/master/)
-<p align="center">
-  <a href="https://xmikux.github.io/builds/xMikux/GlobalWarming/master/">
-    <img src="https://xmikux.github.io/builds/xMikux/GlobalWarming/master/badge.svg" alt="構建伺服器"/>
-  </a>
-</p>
+| 非官方繁體中文版 | 官方英文版 |
+| -------- | -------- |
+| 點下方圖片下載 | 點下方圖片下載 |
+| [![Build Status](https://xMikux.github.io/builds/SlimeTraditionalTranslation/GlobalWarming/master/badge.svg)](https://xMikux.github.io/builds/SlimeTraditionalTranslation/GlobalWarming/master) | [![Build Status](https://thebusybiscuit.github.io/builds/poma123/GlobalWarming/master/badge.svg)](https://thebusybiscuit.github.io/builds/poma123/GlobalWarming/master) |
 
 ## 配置
 成功安裝此附加後,請查看[config.yml](https://github.com/xMikux/GlobalWarming/tree/master/src/main/resources/config.yml).
