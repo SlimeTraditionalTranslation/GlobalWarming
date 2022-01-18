@@ -10,6 +10,7 @@
 ## 導航
 * [下載](#下載)
 * [配置](#配置)
+  * [生態域設置](#生態域設置)
 * [機制](#機制)
   * [環境機制](#環境機制)
   * [汙染機器](#汙染機器)
@@ -24,14 +25,50 @@
 | [![Build Status](https://xMikux.github.io/builds/SlimeTraditionalTranslation/GlobalWarming/master/badge.svg)](https://xMikux.github.io/builds/SlimeTraditionalTranslation/GlobalWarming/master) | [![Build Status](https://thebusybiscuit.github.io/builds/poma123/GlobalWarming/master/badge.svg)](https://thebusybiscuit.github.io/builds/poma123/GlobalWarming/master) |
 
 ## 配置
-成功安裝此附加後,請查看[config.yml](https://github.com/xMikux/GlobalWarming/tree/master/src/main/resources/config.yml).
+成功安裝此附加後,請查看[config.yml](https://github.com/SlimeTraditionalTranslation/GlobalWarming/tree/master/src/main/resources/config.yml).
 - `worlds` 可讓你將世界列入白名單或排除在氣候變化機制外
 - `world-filter-type` 定義世界過濾器要如何運行 (可用類型: ``blacklist``, ``whitelist``)
-- 在`mechanics`部分下,你可以自定義可用的氣候變化機制
-- 在`pollution`部分下包含汙染產生與污染吸收,與物品和實體
-- 在`temperature-options`部分下,你可以配置如何根據汙染和天氣來計算溫度.
+- 在 `mechanics` 部分下,你可以自定義可用的氣候變化機制
+- 你也可以設置 `needed-research-for-player-mechanics`, 這樣機制只會對擁有該指定的研究的玩家生效.
+- 在 `pollution` 部分下包含汙染產生與污染吸收,與物品和實體
+- 在 `temperature-options` 部分下,你可以配置如何根據汙染和天氣來計算溫度.
 
 在你完成編輯檔案之後, 重啟你的伺服器!
+
+### 生態域設置
+在建構 #11 之後 (繁體翻譯的 #15), 配置已改為 BiomeMaps 而不是 `biomes.yml`.
+由於 MC 1.18 帶來的並改變了生態域, 我們現在有兩個不同的生態域 .json 地圖檔案, 位於 `/plugins/GlobalWarming/biome-maps/`.
+這個附加本身決定應該使用哪個生態域地圖, 如果不小心配置了一個無效的生態域, 將使用內部的預設生態域地圖.
+
+你可以在那裡自訂義每個生態域的 `temperature` 和 `max-temp-drop-at-night`:
+<details>
+  <summary>生態域地圖 .json 檔案範本</summary>
+ 
+  ```yaml
+   ...
+   {
+     {
+     "value": {
+       "temperature": 10,
+       "max-temp-drop-at-night": 14
+     },
+     "biomes": [
+       "minecraft:dripstone_caves"
+     ]
+   },
+   {
+     "value": {
+       "temperature": 19,
+       "max-temp-drop-at-night": 10
+     },
+     "biomes": [
+       "minecraft:lush_caves"
+     ]
+   },
+   ...
+  ```
+ </details>
+
 ## 機制
 ### 環境機制:
 
@@ -40,17 +77,17 @@
 - 玩家緩速 (如果溫度足夠高或低,就會發生此情況)
 - 玩家燃燒 (如果溫度過高,就會發生)
 
-### 汙染機器
+### 汙染機制
 汙染可以在每個世界範圍內變化,有兩種汙染機制:
 
 ##### 1. 汙染產生
 - 動物繁殖時
-- 在受汙染的Slimefun機器完成它們的處理.
-- 在受汙染的Slimefun物品被使用在Slimefun的機器.
+- 在受汙染的 Slimefun 機器完成它的處理.
+- 在受汙染的 Slimefun 物品被使用在 Slimefun 的機器.
 
 ##### 2. 汙染吸收
 - 當樹長大
-- 當Slimefun機器吸收完之後. (默認: 空氣壓縮機)
+- 當 Slimefun 機器吸收完之後. (默認: 空氣壓縮機)
 
 ### 新聞快報系統:
 - 每當世界上污染產生變化時,所在該世界的玩家會收到一條"新聞快報"的消息,並從現實世界中隨機選擇一個不錯的新聞快報.
@@ -66,5 +103,6 @@
 - 濾網 (需要用於空氣壓縮機)
 
 ![image](https://user-images.githubusercontent.com/25465545/96293130-90bcfa80-0fea-11eb-9f16-d57105148973.png)
+
 ## API
 All well-documented API classes can be found under the [`me.poma123.globalwarming.api`](https://github.com/poma123/GlobalWarming/tree/master/src/main/java/me/poma123/globalwarming/api) package.
